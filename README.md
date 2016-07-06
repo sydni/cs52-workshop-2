@@ -82,9 +82,19 @@ permalink: /contact/
 Content goes here.
 
 ```
-Your website should look like this by now:
+Your website should start to look like this:
 
 ![alt text](./edited page.png)
+
+### Customize your theme
+
+### Pushing Jekyll to Github pages
+Change the baseurl and url variable in your `_config.yml` file to
+```yaml
+baseurl: "/project-name"
+url: "http://github-username/github.io"
+```
+Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
 
 
 #Welcome to Sass
