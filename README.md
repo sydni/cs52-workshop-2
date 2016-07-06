@@ -3,7 +3,7 @@ Tutorial contents:
 * [Welcome to Jekyll](#welcome-to-jekyll)
 * [Jekyll Tutorial](#mini-jekyll-tutorial)
 * [Welcome to Sass](#welcome-to-sass)
-  * [Installation](###install)
+  * [Installation](#install)
 * [Sass Tutorial](#mini-sass-tutorial)
 
 #Welcome to Jekyll
