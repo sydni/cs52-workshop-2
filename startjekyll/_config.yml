@@ -8,8 +8,8 @@
 # Site settings
 title: Workshop-2
 email: weijia.tang.18@dartmouth.edu
-description: > example site for workshop-2
-baseurl: "localhost:4000" # the subpath of your site, e.g. /blog
+description: example site for workshop-2
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  wtang1996

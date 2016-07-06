@@ -10,6 +10,20 @@ Tutorial contents:
 
 #Mini Jekyll Tutorial
 
+### Start a new project
+Now you have successfully installed Jekyll, start a new project
+```sh
+$ jekyll new project-name
+```
+The `new` command will create an install of Jekyll with the default theme. Move to the new directory `cd project-name` and checkout all the files and subdirectories with `atom .`
+
+Jekyll comes with a built-in development server.
+```sh
+$ jekyll serve
+```
+This command starts this server and starts watching your files for changes. You can now go to `http://localhost:4000` and you will see the Jekyll install we just setup.
+![alt text](./basic page.png)
+
 #Welcome to Sass
 This will run you through a quick introduction to SASS, including **installation**, **basics**, and a simple first **project** to get you familiar with Sass.
 
@@ -44,10 +58,10 @@ body
 ```
 
 **How?** does it work?
-Since Sass is a preprocesser, when it is processed, it takes the variables we defined and outputs normal CSS. 
+Since Sass is a preprocesser, when it is processed, it takes the variables we defined and outputs normal CSS.
 
 ### Nesting
-Nesting allows you to write Sass so that it's more hierarchical (and in this way, more similar to HTML). So instead of having to type out: 
+Nesting allows you to write Sass so that it's more hierarchical (and in this way, more similar to HTML). So instead of having to type out:
 ```CSS
 nav ul {
  margin: 0;
@@ -64,17 +78,17 @@ nav a {
  text-decoration: none;
 }
 ```
-in Sass you can nest the ul, li, and a components under nav. 
+in Sass you can nest the ul, li, and a components under nav.
 ```sass
 nav
  ul
   margin: 0
   padding: 0
   list-style: none
-  
+
  li
   display: inline-block;
-  
+
  a
   padding: 6px;
   text-decoration: none
@@ -89,7 +103,7 @@ Instead of having to write out
  a:visited { color: blue; }
  a:hover { color: green; }
  a:active { color: red; }
-``` 
+```
 in different parts of a large site, you can create a mixin.
 To create a mixin you use the `$mixin` tag followed the name of the mixin followed by any inputs you want to pass in.
 `$mixin mixin_name ($input1, $input2) {...` and then define the mixin within it.
@@ -194,7 +208,7 @@ ul,
 ol
   margin:  0
   padding: 0
-``` 
+```
 which can then be imported to the main or base file:
 ```sass
 // base.sass
@@ -206,9 +220,9 @@ body
   background-color: #efefef
 ```
 
-, or even doing math with a few standard **math operators** `+`,`-`,`*`,`/`, and `%` which could be used as follows: 
+, or even doing math with a few standard **math operators** `+`,`-`,`*`,`/`, and `%` which could be used as follows:
 ```sass
- .container 
+ .container
   width: 600px/960px * 100%
 ```
 
