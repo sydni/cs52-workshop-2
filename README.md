@@ -3,7 +3,7 @@ Tutorial contents:
 * [Welcome to Jekyll](#welcome-to-jekyll)
 * [Jekyll Tutorial](#mini-jekyll-tutorial)
 * [Welcome to Sass](#welcome-to-sass)
-  * [Installation](#install)
+  * [Installation](#install-sass)
 * [Sass Tutorial](#mini-sass-tutorial)
 
 #Welcome to Jekyll
@@ -13,7 +13,7 @@ Tutorial contents:
 #Welcome to Sass
 This will run you through a quick introduction to SASS, including **installation**, **basics**, and a simple first **project** to get you familiar with Sass.
 
-###Install
+###Install Sass
 These instructions are for how to install on a mac using the :computer: terminal.
 (If you are using a different OS then check this page for instructions: http://sass-lang.com/install )
 
