@@ -46,6 +46,42 @@ markdown: kramdown
 One thing to notice is that changes made to `_config.yml` will not be watched by `jekyll serve`. You must restart the server after changes. Now go ahead and customize your website by updating the variables!
 
 ### Publish your first blog post
+Create a markdown file under `_posts/` directory and set the file name to include today's date and the title of your post. Jekyll requires posts to be in this format: `year-month-day-title.md`.
+
+At the top of the markdown file, you have to include the front-matter block so that the file can be processed by Jekyll. Here's an example of a post's front-matter:
+
+```yaml
+---
+layout: post
+title:  "First Post"
+date:   2016-07-06 17:58:35
+categories: blog development
+---
+
+Write your content here.
+
+```
+Jekyll uses the Liquid templating language to process templates. A front-matter block is included at the beginning of every content file. It specifies the layout of the page and some other variables. More about the front-matter can be found here: https://jekyllrb.com/docs/frontmatter/
+
+You can run `jekyll serve` again and check out your post.
+
+### Create a new page
+It's pretty similar to create a new page. Create a folder called `_pages` in root directory so we can better organize our pages. In addition to that, you have to add the following line to your `_config.yml`
+```yaml
+include: [`_pages`]
+```
+
+Then just create a file that's either `.html`, `.markdown`, `.md` or `.textile`. Also don't forget to add front matter. It can include any variables you want but it has to at least contain `layout`, `title` and `permalink`. An example page:
+```yaml
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+Content goes here.
+
+```
 
 
 #Welcome to Sass
