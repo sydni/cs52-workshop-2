@@ -10,6 +10,62 @@ Tutorial contents:
 
 #Mini Jekyll Tutorial
 
+### Install Jekyll
+
+
+#### System Requirements
+
+1. Make sure Xcode Command Line Tools is installed.
+
+*Only do this if you don't think you have them, no need to update right now*
+
+```xcode-select --install```
+
+
+2\. If you don't have Homebrew (everyone on OSX probably does), install it
+
+```ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+
+
+3\. Setup Ruby environment and download Ruby
+
+
+```
+brew install rbenv ruby-build
+
+#Add rbenv to bash so that it loads every time you open a terminal
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+source ~/.bash_profile
+
+Install Ruby
+rbenv install 2.2.2
+rbenv global 2.2.2
+ruby -v
+```
+
+As a sidenote, if you ever start working with ruby and gems you should also install Bundler, Ruby's package manager. Like ```npm``` in Node, manages dependencies. We won't need it today, so let's get started.
+
+
+#### Installing Jekyll
+
+With Ruby set up, all you need to do to install Jekyll is run:
+
+```gem install jekyll```
+
+Check successful install with 
+
+```jekyll -v```
+
+#### And We Are Ready! Let's Make a Site
+
+
+Source:
+
+https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
+
+
+
+
 ### Start a new project
 Now you have successfully installed Jekyll, start a new project
 ```sh
