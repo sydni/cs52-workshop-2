@@ -78,8 +78,8 @@ Instead of having to write out
  a:hover { color: green; }
  a:active { color: red; }
 ``` 
-in different parts of a large site.
-So to create a mixin you use the `$mixin` tag followed the name of the mixin followed by any inputs you want to pass in.
+in different parts of a large site, you can create a mixin.
+To create a mixin you use the `$mixin` tag followed the name of the mixin followed by any inputs you want to pass in.
 `$mixin mixin_name ($input1, $input2) {...` and then define the mixin within it.
 This example even uses a variable as one of the inputs:
 ```sass
