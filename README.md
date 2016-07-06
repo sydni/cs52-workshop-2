@@ -1,5 +1,16 @@
-# Welcome to SASS
-This will run you through a quick introduction to SASS, including **installation**, **basics**, and a simple first **project** to get you familiar with SASS.
+#Jekyll & Sass
+Tutorial contents:
+* [Welcome to Jekyll](#welcome-to-jekyll)
+* [Jekyll Tutorial](#mini-jekyll-tutorial)
+* [Welcome to Sass](#welcome-to-sass)
+* [Sass Tutorial](#mini-sass-tutorial)
+
+#Welcome to Jekyll
+
+#Mini Jekyll Tutorial
+
+#Welcome to Sass
+This will run you through a quick introduction to SASS, including **installation**, **basics**, and a simple first **project** to get you familiar with Sass.
 
 ### Install
 These instructions are for how to install on a mac using the :computer: terminal.
@@ -200,6 +211,7 @@ body
   width: 600px/960px * 100%
 ```
 
+#Mini Sass Tutorial
 
 **Resources**:
 * http://sass-lang.com/install
