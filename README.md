@@ -82,6 +82,9 @@ permalink: /contact/
 Content goes here.
 
 ```
+Your website should look like this by now:
+
+![alt text](./edited page.png)
 
 
 #Welcome to Sass
