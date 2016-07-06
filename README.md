@@ -21,8 +21,32 @@ Jekyll comes with a built-in development server.
 ```sh
 $ jekyll serve
 ```
-This command starts this server and starts watching your files for changes. You can now go to `http://localhost:4000` and you will see the Jekyll install we just setup.
+The command starts this server and starts watching your files for changes. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
+
 ![alt text](./basic page.png)
+
+### Configuration
+The file `_config.yml` hosts global configurations for your entire site. It looks like this:
+```yaml
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+```
+One thing to notice is that changes made to `_config.yml` will not be watched by `jekyll serve`. You must restart the server after changes. Now go ahead and customize your website by updating the variables!
+
+### Publish your first blog post
+
 
 #Welcome to Sass
 This will run you through a quick introduction to SASS, including **installation**, **basics**, and a simple first **project** to get you familiar with Sass.
