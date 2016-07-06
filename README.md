@@ -1,4 +1,4 @@
-#Jekyll & Sass
+#Jekyll & Sass Workshop
 Tutorial contents:
 * [Welcome to Jekyll](#welcome-to-jekyll)
 * [Jekyll Tutorial](#mini-jekyll-tutorial)
