@@ -226,7 +226,7 @@ These are templates that show up on every page - header, footer, etc. They also 
 This is the homepage of your website. It will be automatically transformed by Jekyll as long as it has a front matter.
 
 #### _sass
-Jekyll supports Sass that you can include your `.sass` anywhere and Jekyll will process it, outputting a `.css` file. Don't forget to start the file with two lines of triple hyphens as front matter. Also, if you are using `@imports` to break out your Sass into partials, you have to include the following line in your `_config.yml` file.
+Jekyll can build SASS by default that you can include your `.sass` anywhere and Jekyll will process it, outputting a `.css` file. Don't forget to start the file with two lines of triple hyphens as front matter. Also, if you are using `@imports` to break out your Sass into partials, you have to include the following line in your `_config.yml` file.
 ```yaml
 sass:
   sass_dir: _scss
