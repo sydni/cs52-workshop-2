@@ -367,7 +367,7 @@ $ jekyll serve
 ```
 The command starts this server and starts watching your files for changes similar to Grunt or Gulp. Any time you make a change, the server will build your site automatically. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
 
-![alt text](./basic page.png)
+![alt text](screencap/basic page.png)
 
 You can stop the server using `ctrl-c`.
 
@@ -447,7 +447,7 @@ When Jekyll builds the site, it will parse informatino at the top, generates a p
 
 Your website should start to look like this:
 
-![alt text](./edited page.png)
+![alt text](screencap/edited page.png)
 
 #### Note
 `_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
@@ -500,7 +500,7 @@ I added a few lines to the template above:
 ```
 I put the global variables we set in `_config.yml` into the template, so every new page would contain my `email`, `twitter_username` and `github_username` below its content. Here's the screen shot of my contact page:
 
-![alt text](./contact page.png)
+![alt text](screencap/contact page.png)
 
 
 #### _includes
