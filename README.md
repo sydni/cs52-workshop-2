@@ -168,7 +168,7 @@ Your website should start to look like this:
 ### Pushing Jekyll to Github pages
 Change the baseurl and url variable in your `_config.yml` file to
 ```yaml
-baseurl: "/project-name"
+baseurl: "/cs52-workshop-2/project-name"
 url: "http://github-username/github.io"
 ```
 Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
