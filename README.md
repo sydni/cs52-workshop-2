@@ -1,14 +1,11 @@
 #Jekyll & Sass Workshop
 Tutorial contents:
 * [Welcome to Jekyll](#welcome-to-jekyll)
-* [Jekyll Tutorial](#mini-jekyll-tutorial)
 * [Welcome to Sass](#welcome-to-sass)
   * [Installation](#install-sass)
 * [Sass Tutorial](#mini-sass-tutorial)
 
 #Welcome to Jekyll
-
-#Mini Jekyll Tutorial
 
 ### Goal
 * Install Jekyll
@@ -17,7 +14,6 @@ Tutorial contents:
 * Deploy a Jekyll site to GitHub pages
 
 ### Install Jekyll
-
 
 #### System Requirements
 
@@ -68,8 +64,6 @@ Check successful install with
 Source:
 
 https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
-
-
 
 
 ### Start a new project
@@ -165,6 +159,19 @@ Your website should start to look like this:
 
 ![alt text](./edited page.png)
 
+#### Note
+`_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
+
+### Pushing Jekyll to Github pages
+Change the baseurl and url variable in your `_config.yml` file to
+```yaml
+baseurl: "/project-name"
+url: "http://github-username/github.io"
+```
+Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
+
+You may now jump directly to the **[Welcome to Sass](#welcome-to-sass)** section. If you have time, come back and learn more about the customization of your theme and some advanced features of Jekyll.
+
 ### Customize your theme
 Now you might want to customize the layout and style of your website. We will do this by going through all the folders.
 
@@ -197,23 +204,25 @@ Feel free to customize the layout of page and post!
 #### `_includes`
 These are templates that show up on every page - header, footer, etc. They also use the liquid templating language.
 
-####
+#### 'index.html'
+This is the homepage of your website. It will be automatically transformed by Jekyll as long as it has a front matter.
 
-
-
-
-
-
-#### Note
-`_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
-
-### Pushing Jekyll to Github pages
-Change the baseurl and url variable in your `_config.yml` file to
+#### `_sass`
+Jekyll supports Sass that you can include your `.sass` anywhere and Jekyll will process it, outputting a `.css` file. Don't forget to start the file with two lines of triple hyphens as front matter. Also, if you are using `@imports` to break out your Sass into partials, you have to include the following line in your `_config.yml` file.
 ```yaml
-baseurl: "/project-name"
-url: "http://github-username/github.io"
+sass:
+  sass_dir: _scss
 ```
-Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
+After learning about Sass, come back and customize the style of your websites!
+
+### Data Files
+To integrate external data with a Jekyll website, you can use data files. Jekyll is able to read `YAML` and `JSON` files from the `/_data` folder, allowing you to use them in your templates just like other variables. More information could be found here: http://jekyllrb.com/docs/datafiles/.
+
+**Jekyll source:
+*https://jekyllrb.com/docs/home/
+*https://www.taniarascia.com/make-a-static-website-with-jekyll/
+*https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+*https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
 
 
 #Welcome to Sass
