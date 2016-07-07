@@ -177,8 +177,6 @@ we can rewrite it with `@extend`:
   background-color: orange;
 }
 ```
-<p data-height="265" data-theme-id="0" data-slug-hash="BjZYVL" data-default-tab="css,result" data-user="SitePoint" data-embed-version="2" class="codepen"> See the Pen <a href="http://codepen.io/SitePoint/pen/BjZYVL/"> Duplication of Properties in SCSS</a> by SitePoint (<a href="http://codepen.io/SitePoint">@SitePoint</a>) on <a href="http://codepen.io"> CodePen </a> . </p>
-<script src="//assets.codepen.io/assets/embed/ei.js"> </script>
 
 ### And so much more!
 Sass has so many more options, such as allowing to split your CSS into smaller portions of code and saving those a snippets to **import** into a larger file,
