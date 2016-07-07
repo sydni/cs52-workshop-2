@@ -420,8 +420,9 @@ body
 
 #Mini Sass Tutorial
 
-**Resources**:
+**Sass Resources**:
 * http://sass-lang.com/install
 * http://sass-lang.com/guide
 * https://www.sitepoint.com/the-benefits-of-inheritance-via-extend-in-sass/
 * https://www.sitepoint.com/sass-basics-the-mixin-directive/
+* https://scotch.io/tutorials/getting-started-with-sass
