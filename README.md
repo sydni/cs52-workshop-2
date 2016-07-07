@@ -522,6 +522,7 @@ Usage:
 }
 ```
 And again:
+
 1. Try to guess what the processed css would look like for this mixin
 2. Try it in [Sassmeister](http://www.sassmeister.com/)
 3. Use the mixin for another separate implementation
