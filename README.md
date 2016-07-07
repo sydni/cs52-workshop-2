@@ -170,7 +170,7 @@ url: "http://github-username/github.io"
 ```
 Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
 
-You may now jump directly to the **[Welcome to Sass](#welcome-to-sass)** section. If you have time, come back and learn more about the customization of your theme and some advanced features of Jekyll.
+### You may now jump directly to the [Welcome to Sass](#welcome-to-sass) section. If you have time, come back and learn more about the customization of your theme and some advanced features of Jekyll.
 
 ### Customize your theme
 Now you might want to customize the layout and style of your website. We will do this by going through all the folders.
@@ -201,13 +201,13 @@ You may notice the double curly braces in the template. They are part of the **L
 
 Feel free to customize the layout of page and post!
 
-#### `_includes`
+#### _includes
 These are templates that show up on every page - header, footer, etc. They also use the liquid templating language.
 
 #### 'index.html'
 This is the homepage of your website. It will be automatically transformed by Jekyll as long as it has a front matter.
 
-#### `_sass`
+#### _sass
 Jekyll supports Sass that you can include your `.sass` anywhere and Jekyll will process it, outputting a `.css` file. Don't forget to start the file with two lines of triple hyphens as front matter. Also, if you are using `@imports` to break out your Sass into partials, you have to include the following line in your `_config.yml` file.
 ```yaml
 sass:
@@ -218,11 +218,11 @@ After learning about Sass, come back and customize the style of your websites!
 ### Data Files
 To integrate external data with a Jekyll website, you can use data files. Jekyll is able to read `YAML` and `JSON` files from the `/_data` folder, allowing you to use them in your templates just like other variables. More information could be found here: http://jekyllrb.com/docs/datafiles/.
 
-**Jekyll source:
-*https://jekyllrb.com/docs/home/
-*https://www.taniarascia.com/make-a-static-website-with-jekyll/
-*https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
-*https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
+** Jekyll source:
+* https://jekyllrb.com/docs/home/
+* https://www.taniarascia.com/make-a-static-website-with-jekyll/
+* https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+* https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
 
 
 #Welcome to Sass
