@@ -159,7 +159,7 @@ When Jekyll builds the site, it will parse informatino at the top, generates a p
 
 Your website should start to look like this:
 
-![alt text](./edited-page.png)
+![alt text](./edited page.png)
 
 #### Note
 `_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
@@ -215,7 +215,7 @@ I added a few lines to the template above:
 ```
 I put the global variables we set in `_config.yml` into the template, so every new page would contain my `email`, `twitter_username` and `github_username` below its content. Here's the screen shot of my contact page:
 
-![alt text](./basic-page.png)
+![alt text](./contact page.png)
 
 
 #### _includes
