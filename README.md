@@ -10,6 +10,12 @@ Tutorial contents:
 
 #Mini Jekyll Tutorial
 
+### Goal
+* Install Jekyll
+* Create a custom website running on Jekyll
+* publish first blog post and add another page
+* Deploy a Jekyll site to GitHub pages
+
 ### Install Jekyll
 
 
@@ -52,7 +58,7 @@ With Ruby set up, all you need to do to install Jekyll is run:
 
 ```gem install jekyll```
 
-Check successful install with 
+Check successful install with
 
 ```jekyll -v```
 
@@ -67,7 +73,7 @@ https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-
 
 
 ### Start a new project
-Now you have successfully installed Jekyll, start a new project
+Now you have successfully installed Jekyll, let's start a new project
 ```sh
 $ jekyll new project-name
 ```
@@ -77,12 +83,14 @@ Jekyll comes with a built-in development server.
 ```sh
 $ jekyll serve
 ```
-The command starts this server and starts watching your files for changes. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
+The command starts this server and starts watching your files for changes similar to Grunt or Gulp. Any time you make a change, the server will build your site automatically. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
 
 ![alt text](./basic page.png)
 
+You can stop the server using `ctrl-c`.
+
 ### Configuration
-The file `_config.yml` hosts global configurations for your entire site. It looks like this:
+Let's start customizing our website. The file `_config.yml` hosts global configurations for your entire site. It looks like this:
 ```yaml
 # Site settings
 title: Your awesome title
@@ -99,12 +107,19 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 ```
-One thing to notice is that changes made to `_config.yml` will not be watched by `jekyll serve`. You must restart the server after changes. Now go ahead and customize your website by updating the variables!
+Some settings above such as `email`, `twitter_username` can be used as global variables as you can retrieve them in templates like so
+```yaml
+{{ site.variable_name }}
+```
+
+One important thing to notice is that changes made to `_config.yml` will not be watched by `jekyll serve`. You must restart the server after changes. Also, all indentation is mandatory and must be made with two spaces, or else the file will not work.
+
+Now go ahead and customize your website by updating the variables! You can leave the url and baseurl unchanged as we are going to cover them later.
 
 ### Publish your first blog post
-Create a markdown file under `_posts/` directory and set the file name to include today's date and the title of your post. Jekyll requires posts to be in this format: `year-month-day-title.md`.
+Create a markdown file under `_posts/` directory and set the file name to include today's date and the title of your post. Jekyll requires posts to be in this format: `year-month-day-title.md`. This is going to be automatically parsed by Jekyll and it will create default title and date variables.
 
-At the top of the markdown file, you have to include the front-matter block so that the file can be processed by Jekyll. Here's an example of a post's front-matter:
+At the top of the markdown file, you have to include the front-matter block so that the file can be processed by Jekyll. You can always override the title and date variables here. Here's an example of a post's front-matter:
 
 ```yaml
 ---
@@ -117,7 +132,12 @@ categories: blog development
 Write your content here.
 
 ```
-Jekyll uses the Liquid templating language to process templates. A front-matter block is included at the beginning of every content file. It specifies the layout of the page and some other variables. More about the front-matter can be found here: https://jekyllrb.com/docs/frontmatter/
+Jekyll uses the Liquid templating language to process templates. A front-matter block is included at the beginning of every YAML content file. It specifies the layout of the page and some other variables. You can actually access these front-matter variables with liquid by doing
+```yaml
+{{ page.variable_name }}
+```
+
+More about the front-matter can be found here: https://jekyllrb.com/docs/frontmatter/
 
 You can run `jekyll serve` again and check out your post.
 
@@ -126,6 +146,7 @@ It's pretty similar to create a new page. Create a folder called `_pages` in roo
 ```yaml
 include: [`_pages`]
 ```
+You should delete `about.md` from the main directory and put it in the `_pages` directory.
 
 Then just create a file that's either `.html`, `.markdown`, `.md` or `.textile`. Also don't forget to add front matter. It can include any variables you want but it has to at least contain `layout`, `title` and `permalink`. An example page:
 ```yaml
@@ -138,11 +159,53 @@ permalink: /contact/
 Content goes here.
 
 ```
+When Jekyll builds the site, it will parse informatino at the top, generates a page accessible at the URL `/about`, and make sure it uses the layout that's named 'page'.
+
 Your website should start to look like this:
 
 ![alt text](./edited page.png)
 
 ### Customize your theme
+Now you might want to customize the layout and style of your website. We will do this by going through all the folders.
+
+#### '_layouts'
+This is where you put your templates, which are the HTML that wrap posts and other types of content like pages. Most simple blog websites need only two layout files: one for blog posts (post.html) and one for static pages(page.html). If you create a file with an .html or .md extension in the root, it will be treated as a static page. For example, about.md would be outputted as www.mysite.com/about.
+
+Here's the template for page:
+```html
+---
+layout: default
+---
+<article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+</article>
+```
+Notice that you also have to include front matter at the top. For pages and posts, the default layout gets loaded, plus any additional layout information you desire.
+
+You may notice the double curly braces in the template. They are part of the **Liquid template tags** that are used to execute loops and conditional statements and to output content. In `page.html`, `{{ page.title }}` and `{{ content }}` output the title and content of the blog post. In addition, single curly braces and modules are used for conditionals and loops and for displaying includes. You can learn more about Liquid here: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers.
+
+Feel free to customize the layout of page and post!
+
+#### `_includes`
+These are templates that show up on every page - header, footer, etc. They also use the liquid templating language.
+
+####
+
+
+
+
+
+
+#### Note
+`_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
 
 ### Pushing Jekyll to Github pages
 Change the baseurl and url variable in your `_config.yml` file to
