@@ -79,7 +79,7 @@ $ jekyll serve
 ```
 The command starts this server and starts watching your files for changes similar to Grunt or Gulp. Any time you make a change, the server will build your site automatically. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
 
-![alt text](./basic page.png)
+![alt text](./basic-page.png)
 
 You can stop the server using `ctrl-c`.
 
@@ -159,7 +159,7 @@ When Jekyll builds the site, it will parse informatino at the top, generates a p
 
 Your website should start to look like this:
 
-![alt text](./edited page.png)
+![alt text](./edited-page.png)
 
 #### Note
 `_site` folder is your generated static website. **Never** place any files in that folder, otherwise they will be deleted and overwritten.
@@ -204,6 +204,20 @@ You may notice the double curly braces in the template. They are part of the **L
 
 Feel free to customize the layout of page and post!
 
+I added a few lines to the template above:
+```html
+<div class="post-content">
+  {{ content }}
+  <p> {{ site.email }} </p>
+  <p> {{ site.twitter_username }} </p>
+  <p> {{ site.github_username }} </p>
+</div>
+```
+I put the global variables we set in `_config.yml` into the template, so every new page would contain my `email`, `twitter_username` and `github_username` below its content. Here's the screen shot of my contact page:
+
+![alt text](./basic-page.png)
+
+
 #### _includes
 These are templates that show up on every page - header, footer, etc. They also use the liquid templating language.
 
@@ -218,8 +232,10 @@ sass:
 ```
 After learning about Sass, come back and customize the style of your websites!
 
+
 ### Data Files
 To integrate external data with a Jekyll website, you can use data files. Jekyll is able to read `YAML` and `JSON` files from the `/_data` folder, allowing you to use them in your templates just like other variables. More information could be found here: http://jekyllrb.com/docs/datafiles/.
+
 
 **Jekyll sources**:
 * https://jekyllrb.com/docs/home/
