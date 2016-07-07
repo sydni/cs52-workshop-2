@@ -447,8 +447,86 @@ body
  .container
   width: 600px/960px * 100%
 ```
+### Sass vs Scss??
+Sass is the older syntax and extension name from when Sass was first released, but the new main syntax of Sass 3 is Scss and looks more like traditional CSS3 because of its use of brackets and semicolons while still maintaining Sass features such as Nesting.
 
 #Mini Sass Tutorial
+**Mixins** are some of the more confusing elements of Sass, so we're going to build a couple of simple mixins here to get an idea of what they can do.
+
+**Where** to use Sass?
+As you saw in SA3, one option (and the most commonly used when developing web pages and web apps) is to have a Sass processor which is part of your development environment. Another option, however is to use [Sassmeister](http://www.sassmeister.com/) to play around with Sass while you are getting used to it.
+
+##Now try it:
+###Make a Transitions Mixin that adds autoprefixes
+
+Instead of having to type out the autoprefixes every time we make a transition, this mixin does it for us.
+```scss
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+```
+now one possible use of it would be:
+```scss
+a {
+  color: gray;
+  @include transition(color .3s ease);
+  &:hover {
+    color: black;
+  }
+}
+```
+1. Try to guess what the processed css would look like for this mixin
+2. Try it in [Sassmeister](http://www.sassmeister.com/)
+3. Use the mixin for another separate implementation
+ 
+###Create a Mixin for different Sized Screen Media queries:
+```scss
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+```
+Usage:
+```scss
+.sidebar {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+  @include bp-medium {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
+}
+```
+And again:
+1. Try to guess what the processed css would look like for this mixin
+2. Try it in [Sassmeister](http://www.sassmeister.com/)
+3. Use the mixin for another separate implementation
+
+
 
 **Sass Resources**:
 * http://sass-lang.com/install
@@ -456,3 +534,4 @@ body
 * https://www.sitepoint.com/the-benefits-of-inheritance-via-extend-in-sass/
 * https://www.sitepoint.com/sass-basics-the-mixin-directive/
 * https://scotch.io/tutorials/getting-started-with-sass
+* http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/
