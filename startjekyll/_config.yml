@@ -18,6 +18,3 @@ github_username:  wtang1996
 markdown: kramdown
 
 include: ['_pages']
-
-sass:
-  sass_dir: _scss
