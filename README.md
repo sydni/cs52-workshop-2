@@ -12,6 +12,7 @@ Tutorial contents:
 * Create a custom website running on Jekyll
 * publish first blog post and add another page
 * Deploy a Jekyll site to GitHub pages
+* Further customize the templates and style of website (if time allowed)
 
 ### Install Jekyll
 
@@ -79,7 +80,7 @@ $ jekyll serve
 ```
 The command starts this server and starts watching your files for changes similar to Grunt or Gulp. Any time you make a change, the server will build your site automatically. You can now go to `http://localhost:4000` and will see the Jekyll install we just setup.
 
-![alt text](./basic-page.png)
+![alt text](./basic page.png)
 
 You can stop the server using `ctrl-c`.
 
@@ -242,6 +243,7 @@ To integrate external data with a Jekyll website, you can use data files. Jekyll
 * https://www.taniarascia.com/make-a-static-website-with-jekyll/
 * https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
 * https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme
+
 
 
 #Welcome to Sass

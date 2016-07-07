@@ -9,8 +9,8 @@
 title: Workshop-2
 email: weijia.tang.18@dartmouth.edu
 description: example site for workshop-2
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "/startjekyll" # the subpath of your site, e.g. /blog
+url: "http://wtang1996/github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  wtang1996
 
