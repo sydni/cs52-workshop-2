@@ -172,12 +172,13 @@ url: "http://github-username/github.io"
 ```
 Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push.
 
-### You may now jump directly to the [Welcome to Sass](#welcome-to-sass) section. If you have time, come back and learn more about the customization of your theme and some advanced features of Jekyll.
+### You may now jump directly to the [Welcome to Sass](#welcome-to-sass) section.
+If you have time, come back and learn more about the customization of your theme and some advanced features of Jekyll.
 
 ### Customize your theme
 Now you might want to customize the layout and style of your website. We will do this by going through all the folders.
 
-#### '_layouts'
+#### _layouts
 This is where you put your templates, which are the HTML that wrap posts and other types of content like pages. Most simple blog websites need only two layout files: one for blog posts (post.html) and one for static pages(page.html). If you create a file with an .html or .md extension in the root, it will be treated as a static page. For example, about.md would be outputted as http://github-username/github.io/project-name/about.
 
 Here's the template for page:
