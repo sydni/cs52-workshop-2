@@ -84,7 +84,7 @@ The command starts this server and starts watching your files for changes simila
 You can stop the server using `ctrl-c`.
 
 ### Configuration
-Let's start customizing our website. The file `_config.yml` hosts global configurations for your entire site. It looks like this:
+Let's start customizing your website. The file `_config.yml` hosts global configurations for your entire site. It looks like this:
 ```yaml
 # Site settings
 title: Your awesome title
@@ -111,7 +111,9 @@ One important thing to notice is that changes made to `_config.yml` will not be 
 Now go ahead and customize your website by updating the variables! You can leave the url and baseurl unchanged as we are going to cover them later.
 
 ### Publish your first blog post
-Create a markdown file under `_posts/` directory and set the file name to include today's date and the title of your post. Jekyll requires posts to be in this format: `year-month-day-title.md`. This is going to be automatically parsed by Jekyll and it will create default title and date variables.
+Create a markdown file under `_posts/` directory and set the file name to include today's date and the title of your post. Jekyll requires posts to be in this format:
+`year-month-day-title.md`
+This is going to be automatically parsed by Jekyll and it will create default title and date variables.
 
 At the top of the markdown file, you have to include the front-matter block so that the file can be processed by Jekyll. You can always override the title and date variables here. Here's an example of a post's front-matter:
 
@@ -126,7 +128,7 @@ categories: blog development
 Write your content here.
 
 ```
-Jekyll uses the Liquid templating language to process templates. A front-matter block is included at the beginning of every YAML content file. It specifies the layout of the page and some other variables. You can actually access these front-matter variables with liquid by doing
+Jekyll uses the Liquid templating language to process templates. A front-matter block is included at the beginning of every YAML content file. It specifies the layout of the page and some other variables. Later in templates, you can actually access these front-matter variables with liquid by doing
 ```yaml
 {{ page.variable_name }}
 ```
@@ -176,7 +178,7 @@ Serve your Jekyll one last time. Checkout to the `gh-pages` branch and then push
 Now you might want to customize the layout and style of your website. We will do this by going through all the folders.
 
 #### '_layouts'
-This is where you put your templates, which are the HTML that wrap posts and other types of content like pages. Most simple blog websites need only two layout files: one for blog posts (post.html) and one for static pages(page.html). If you create a file with an .html or .md extension in the root, it will be treated as a static page. For example, about.md would be outputted as www.mysite.com/about.
+This is where you put your templates, which are the HTML that wrap posts and other types of content like pages. Most simple blog websites need only two layout files: one for blog posts (post.html) and one for static pages(page.html). If you create a file with an .html or .md extension in the root, it will be treated as a static page. For example, about.md would be outputted as http://github-username/github.io/project-name/about.
 
 Here's the template for page:
 ```html
@@ -204,7 +206,7 @@ Feel free to customize the layout of page and post!
 #### _includes
 These are templates that show up on every page - header, footer, etc. They also use the liquid templating language.
 
-#### 'index.html'
+#### index.html
 This is the homepage of your website. It will be automatically transformed by Jekyll as long as it has a front matter.
 
 #### _sass
@@ -218,7 +220,7 @@ After learning about Sass, come back and customize the style of your websites!
 ### Data Files
 To integrate external data with a Jekyll website, you can use data files. Jekyll is able to read `YAML` and `JSON` files from the `/_data` folder, allowing you to use them in your templates just like other variables. More information could be found here: http://jekyllrb.com/docs/datafiles/.
 
-** Jekyll source:
+**Jekyll sources**:
 * https://jekyllrb.com/docs/home/
 * https://www.taniarascia.com/make-a-static-website-with-jekyll/
 * https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
